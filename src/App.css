@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); 
+/*  got the above from google fonts, select font, then hit "@import", copy and paste. */
+
+.App
+{
+    width : 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5AB9EA;
+    font-family: Bebas Neue; /*same font that was imported above.*/
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading
+{
+    text-transform: uppercase;
+    font-size: 45px;
+    z-index: 1; /*why? also what does @media query cater to?*/
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input_box
+{
+    width: 100%;
+    border-radius: 50px;
+    padding : 20px 30px;
+    font-size: 25px;
+    border : none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px black;
+    font-family: Bebas Neue;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input_box:focus /* does the cool colour change thing when input_box is being interacted with. */
+{
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+    outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.inputConfirm
+{
+    font-family: Bebas Neue;
+    background-color: #8860D0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 50px;
+    right: 0px;
+    border: none;
+    font-size: 25px;
+    transition: 0.2s all;
+    box-shadow: 0 0 10px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputConfirm:hover
+{
+    transform: scale(0.9);
+    background-color: #9c6fed;
+}
+
+.taskInput
+{
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: center;
 }

@@ -1,0 +1,100 @@
+reportWebVitals.ts - what does it do?
+1. Largest Contentful Paint (LCP): measures the loading performance of a page, by recording the time it takes for the largest image or text block to load.
+2. First Input Delay (FID): measures the interactivity of a page, by recording the time it takes for a page to become responsive to user input.
+3. Cumulative Layout Shift (CLS): measures the stability of a page, by recording the amount of layout shift that occurs during the loading process.
+it's not required for this project, so deleted from 'src'.
+
+reportWebVitals.ts, setupTests.ts, logo.svg, App.test.tsx are deleted from src.
+Then, head to App.tsx, delete logo line (line 2), clear everything between <header> tags.
+In index.tsx, remove reportWebVitals' import and call.
+App.css hosts the decor, clean it.
+
+
+
+
+
+Types and Object in TypeScript:
+
+types are like blueprints for an object. 
+eg :
+
+type Person =
+{
+    name : string; 
+    age? : number; //'?' makes age an optional field in Person object.
+}
+
+var Rohit : Person
+{
+    name = "Rohit";
+    age = 19;
+}
+
+interface Person 
+{
+    name : string; 
+    age? : number; //'?' makes age an optional field in Person object.
+} //also does the same as type, types and interfaces are both aliases.
+
+types and interfaces have a weird form of inheritance
+
+eg: 
+
+type a = 
+{
+    A : string;
+    B : number;
+}
+
+type b = a &
+{
+    C : string; 
+    D : unknown;
+}
+
+
+eg: 
+
+interface a 
+{
+    A : string;
+    B : number;
+}
+
+interface b extends a 
+{
+    C : string; 
+    D : unknown;
+}
+
+
+to cater to an array of persons, declaration:
+
+    for just an array of nums: 
+    eg: var arr : number[];
+
+    for an array of Persons:
+    eg: var arr : Person[];
+
+
+if a variable can take two types, we utilise union(|):
+eg: var balance : number | string;
+
+
+to declare functions: 
+eg: var someFunc = (age : number, name : string) => void; //void is the returnType, void returns 'undefined'; never returns 'null'.
+
+
+If a variable can take any value, one might categorise it with 'any' type. However, 'unknown' is preferred for the same.
+
+
+
+
+
+
+
+
+
+Inside src, create 'components' folder.
+Create file called InputFields.tsx. Here, we write <InputFields> tag.
+import InputFields from "./components/InputFields", inside it do 'rafce + enter' - creates boilerplate code.
