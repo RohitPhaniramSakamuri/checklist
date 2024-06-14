@@ -11,25 +11,29 @@ interface Props
     setTasks : React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-const TaskBox : React.FC<Props> = ({toDo, tasks, setTasks}) => {
-  return (
-    <form className='taskBox'>
-        <span className="taskBox--text">
-            {toDo.toDo}
-        </span>
-        <div className="Icons">
-            <span className="editIcon">
+const TaskBox: React.FC<Props> = ({ toDo, tasks, setTasks }) => {
+    return (
+      <>
+        {toDo.id % 2 === 0 && (
+          <form className='taskBox'>
+            <span className="taskBox--text">
+              {toDo.toDo}
+            </span>
+            <div className="Icons">
+              <span className="editIcon">
                 <MdOutlineModeEditOutline />
-            </span>
-            <span className="trashIcon">
+              </span>
+              <span className="trashIcon">
                 <FaRegTrashAlt />
-            </span>
-            <span className="checkIcon">
+              </span>
+              <span className="checkIcon">
                 <MdOutlineDownloadDone />
-            </span>
-        </div>
-    </form>
-  )
-}
-
-export default TaskBox
+              </span>
+            </div>
+          </form>
+        )}
+      </>
+    );
+  }
+  
+  export default TaskBox;
