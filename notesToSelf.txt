@@ -98,3 +98,8 @@ If a variable can take any value, one might categorise it with 'any' type. Howev
 Inside src, create 'components' folder.
 Create file called InputFields.tsx. Here, we write <InputFields> tag.
 import InputFields from "./components/InputFields", inside it do 'rafce + enter' - creates boilerplate code.
+
+
+be very careful how state is being handled.
+
+models.ts contains an interface that has the types of each attribute that a task has.

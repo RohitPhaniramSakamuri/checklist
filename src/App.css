@@ -68,3 +68,32 @@
     position: relative;
     align-items: center;
 }
+
+.todos
+{
+    display : flex;
+    justify-content: space-evenly;
+    width : 90%;
+    flex-wrap: wrap;
+}
+
+.taskBox {
+    display: flex;
+    width: 80%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.taskBox--text
+{
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
